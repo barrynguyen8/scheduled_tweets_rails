@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   post "sign_in", to: "sessions#create"
   
   delete "logout", to: "sessions#destroy" #destroy does not need a view 
+  
+  get "password/reset", to: "password_resets#new"
+  post "password/reset", to: "password_resets#create"
 
   root to: "main#index"
 
